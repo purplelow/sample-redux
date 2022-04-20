@@ -18,9 +18,11 @@ const CounterContainer = () => {
   //   }),
   //   shallowEqual
   // );
+
   // 최적화 ========================= 2
   // const number = useSelector(state => state.counter.number);
   // const diff = useSelector(state => state.counter.diff);
+
   // 최적화 ========================= 3
   const { number, diff } = useSelector(
     (state) => ({
@@ -45,7 +47,7 @@ const CounterContainer = () => {
       // 상태,
       number={number}
       diff={diff}
-      // 액션을 디스패치 하는 삼수들을 props로 넣어준다.
+      // 액션을 디스패치 하는 함수들을 props로 넣어준다.
       onIncrease={onIncrease}
       onDecrease={onDecrease}
       onSetDiff={onSetDiff}
